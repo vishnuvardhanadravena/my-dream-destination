@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass, Instagram, Twitter, Facebook, Mail } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -20,7 +21,14 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-zinc-900 dark:text-white mb-6">Explore</h4>
             <ul className="space-y-4">
-              <li><a href="/cities" className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors">All Cities</a></li>
+             <li>
+  <Link
+    to="/cities"
+    className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors"
+  >
+    All Cities
+  </Link>
+</li>
               <li><a href="#" className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors">Popular Places</a></li>
               <li><a href="#" className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors">Local Cuisines</a></li>
               <li><a href="#" className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors">Travel Guides</a></li>
