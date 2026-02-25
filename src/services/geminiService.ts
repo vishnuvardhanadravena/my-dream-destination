@@ -5,6 +5,8 @@ import { GoogleGenAI } from "@google/genai";
 ------------------------------ */
 
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const modelName =
+  import.meta.env.VITE_GEMINI_MODEL || "gemini-2.5-flash";
 
 if (!apiKey) {
   throw new Error("Gemini API key missing in .env file");
@@ -35,7 +37,7 @@ export async function getPlaceDetails(
 ): Promise<string> {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: modelName,
       contents: `Provide a detailed travel guide for "${placeName}" in "${cityName}", India.
 
 Include:
@@ -65,7 +67,7 @@ export async function getCityHighlights(
 ): Promise<string> {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: modelName,
       contents: `Provide a brief overview of ${cityName}, India, including:
 - Famous foods
 - Cultural vibe
@@ -90,7 +92,7 @@ export async function getRestaurants(
 ) {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: modelName,
       contents: `List 5 famous restaurants in ${cityName}, India.
 
 Return ONLY valid JSON in this exact format:
@@ -135,7 +137,7 @@ export async function getHotels(
 ) {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: modelName,
       contents: `List 5 top-rated hotels in ${cityName}, India.
 
 Return ONLY valid JSON in this exact format:
