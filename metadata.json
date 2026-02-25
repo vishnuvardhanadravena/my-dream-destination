@@ -1,0 +1,5 @@
+{
+  "name": "My Dream Destination",
+  "description": "A comprehensive travel guide for exploring India's most beautiful cities, famous landmarks, local cuisines, and accommodations.",
+  "requestFramePermissions": ["geolocation"]
+}
