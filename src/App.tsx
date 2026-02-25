@@ -40,10 +40,10 @@ function App(): JSX.Element {
               <Route path="/" element={<LandingPage />} />
               <Route path="/cities" element={<CityListPage />} />
               <Route path="/city/:cityId" element={<CityDetailPage />} />
-              {/* <Route
+              <Route
                 path="/city/:cityId/place/:placeId"
                 element={<PlaceDetailPage />}
-              /> */}
+              />
               <Route path="/wishlist" element={<WishlistPage />} />
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/completed" element={<CompletedTravelsPage />} />
